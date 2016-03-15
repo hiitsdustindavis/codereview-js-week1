@@ -124,7 +124,7 @@ gulp.task('gitAdd', function(){
   .pipe(git.add());
 });
 
-gulp.task('gitCommit', function(){
+gulp.task('gitCommit', ['gitAdd'], function(){
   var message = fs.readFileSync("./message.txt");
   return gulp.src('./*')
     .pipe(gitignore())
