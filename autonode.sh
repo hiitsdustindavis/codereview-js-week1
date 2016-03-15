@@ -16,9 +16,9 @@ read project
 if [ ! -d "$project" ]; then # if the directory does not exist
   mkdir ../"$project"
   mkdir ../"$project"/js ../"$project"/scss
-  cp cp/js/* ../"$project"/js/
-  cp cp/scss/* ../"$project"/scss/
-  cp cp/* ../"$project"/
+  cp -r cp/js/. ../"$project"/js/
+  cp -r cp/scss/. ../"$project"/scss/
+  cp -r cp/. ../"$project"/
   echo "Directory created and files added"
 else
   echo "Directory already exists"
