@@ -20,6 +20,8 @@ var jshint = require('gulp-jshint');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var git = require('gulp-git');
+var fs = require('fs');
 var buildProduction = utilities.env.production;
 
 gulp.task('concatInterface', function() {
@@ -93,6 +95,7 @@ gulp.task('serve', function() {
   gulp.watch(['bower.json'], ['bowerBuild']);
   gulp.watch(['*.html'], ['htmlBuild']);
   gulp.watch("scss/*scss", ['cssBuild']);
+  gulp.watch("message.txt", ['gitCommit']);
 });
 
 gulp.task('jshint', function(){
@@ -108,4 +111,15 @@ gulp.task('cssBuild', function() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('gitAdd', function(){
+  return gulp.src('./*')
+  .pipe(git.add());
+});
+
+gulp.task('gitCommit', ['gitAdd'], function(){
+  var message = fs.readFileSync("./message.txt");
+  return gulp.src('./*')
+    .pipe(git.commit(message));
 });
