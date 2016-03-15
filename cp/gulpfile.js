@@ -21,6 +21,7 @@ var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var git = require('gulp-git');
+var gitignore = require('gulp-gitignore');
 var fs = require('fs');
 var buildProduction = utilities.env.production;
 
@@ -74,14 +75,17 @@ gulp.task("build", ['clean'], function(){
 
 gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function() {
   browserSync.reload();
+  gulp.start('gitStatus');
 });
 
 gulp.task('bowerBuild', ['bower'], function() {
   browserSync.reload();
+  gulp.start('gitStatus');
 });
 
 gulp.task('htmlBuild', function() {
   browserSync.reload();
+  gulp.start('gitStatus');
 });
 
 gulp.task('serve', function() {
@@ -96,6 +100,7 @@ gulp.task('serve', function() {
   gulp.watch(['*.html'], ['htmlBuild']);
   gulp.watch("scss/*scss", ['cssBuild']);
   gulp.watch("message.txt", ['gitCommit']);
+  gulp.watch(["*"], ["gitStatus"]);
 });
 
 gulp.task('jshint', function(){
@@ -115,11 +120,19 @@ gulp.task('cssBuild', function() {
 
 gulp.task('gitAdd', function(){
   return gulp.src('./*')
+  .pipe(gitignore())
   .pipe(git.add());
 });
 
-gulp.task('gitCommit', ['gitAdd'], function(){
+gulp.task('gitCommit', function(){
   var message = fs.readFileSync("./message.txt");
   return gulp.src('./*')
+    .pipe(gitignore())
     .pipe(git.commit(message));
+});
+
+gulp.task('gitStatus', function() {
+  git.status({args: '--porcelain'}, function (err, stdout) {
+    if(err) throw err;
+  });
 });
