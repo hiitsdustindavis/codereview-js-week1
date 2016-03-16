@@ -42,6 +42,8 @@ atom .
 npm install
 bower install
 
+sed -i 'bak' 's/git commit/git pair-commit/g' ./node_modules/gulp-git/lib/commit.js
+
 if [ -d ".git" ]; then
   echo "Git already init"
 else
