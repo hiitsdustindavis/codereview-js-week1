@@ -48,7 +48,9 @@ Just open message.txt, edit the message (the files entire contents are the commi
 ### By Nicholas Jensen-Hay
 
 Pull requests accepted from:
-* Joe Karasek - Fixed gulp serve crash
+* Joe Karasek
+  * Fixed gulp serve crash
+  * Provided readme template
 
 ### License
 
