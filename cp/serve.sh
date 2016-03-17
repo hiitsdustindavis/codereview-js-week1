@@ -1,12 +1,12 @@
-if[ ! -d "node_modules" ]
+if [ ! -d "./node_modules" ]; then
   npm install
 fi
 
-if[ ! -d "bower_componenets" ]
+if [ ! -d "bower_componenets" ]; then
   bower install
 fi
 
-if[ ! -d "build" ]
+if [ ! -d "build" ]; then
   gulp build
 fi
 
