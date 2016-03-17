@@ -1,4 +1,5 @@
 # Auto Node
+## Version 1.1
 
 A bash script that creates the directory structure, and copies the required files for node, bower, and gulp for serving and building js node projects.
 It also includes a script to create the pairs file for Epicodus students.
