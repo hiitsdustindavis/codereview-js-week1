@@ -17,6 +17,7 @@ if [ ! -d "$project" ]; then # if the directory does not exist
   mkdir ../"$project"
   mkdir ../"$project"/js ../"$project"/scss
   cp -r cp/js/. ../"$project"/js/
+  touch ../"$project"/js/"$project".js
   cp -r cp/scss/. ../"$project"/scss/
   cp -r cp/. ../"$project"/
   echo "Directory created and files added"
