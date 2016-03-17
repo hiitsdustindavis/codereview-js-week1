@@ -20,6 +20,7 @@ if [ ! -d "$project" ]; then # if the directory does not exist
   touch ../"$project"/js/"$project".js
   cp -r cp/scss/. ../"$project"/scss/
   cp -r cp/. ../"$project"/
+  cp -r cp/atom/config.cson ~/.atom/
   echo "Directory created and files added"
 else
   echo "Directory already exists"
@@ -36,6 +37,16 @@ cd ../"$project"
 echo "Enter pairs intials"
 read pairinitial
 
+echo "Setting up atom"
+apm install TODO-show
+apm install minimap minimap-highlight-selected minimap-selection
+apm install highlight-selected
+apm install autoclose-html
+apm install linter linter-coffeelint linter-csslint linter-jsonlint linter-scss-lint linter-jsxhint
+apm install file-icons
+apm install atom-beautify
+apm install color-picker
+apm install merge-conflicts
 
 echo "Opening directory in atom"
 atom .
