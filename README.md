@@ -1,13 +1,13 @@
 # Auto Node
-## Version 1.1
+## Version 1.1.1
 
-A bash script that creates the directory structure, and copies the required files for node, bower, and gulp for serving and building js node projects.
-It also includes a script to create the pairs file for Epicodus students.
+A bash script that creates the directory structure, and copies the required files for node, bower, and gulp for serving and building js node projects. It installs node and bower. Adds git commands to gulp, shows gulp status. Makes the gulp serve not crash on bad js loads. Configures atom and installs some cool packages. Provides a shell script with every project so when you clone it from github restarting is easy.
+It also includes a script to create the pairs file for Epicodus students, which Automatically runs at the beginning of autonode.
 
 ### How to use
 
-#MY CONDITIONS FOR USING THIS PROGRAM
-##Fork it to your own repository
+# MY CONDITIONS FOR USING THIS PROGRAM
+## Fork it to your own repository
 Change your name and initials in paircreator.sh and autonode.sh - the default is my name
 Run the script by typing
     ./autonode.sh - to create a new project including
@@ -29,12 +29,21 @@ Run the script by typing
 * Automatically installes npm and bower packages.
 * Automatically opens atom for you to start writing your files while it does the above install.
 * Opens the server at the end of the install so you can see your work.
-* When pulling a project made with autonode from github just run ./serve.sh to node install, bower install, gulp build and gulp serve.
+* When pulling a project made with autonode from github just run ./serve.sh to config atom, install atom packages, node install, bower install, gulp build and gulp serve.
 * ./serve.sh doesn't node or bower if the folders already exist
 
-#### Easy-Commit
+##### Easy-Commit
 
 Just open message.txt, edit the message (the files entire contents are the commit message) and save to commit your work!
+
+##### Atom Packages!
+* TODO-show
+* minimap, with highlight-selected and selected
+* highlight-selected
+* linter with css, scss, and js support
+* file-icons
+* atom-beautify - RIGHT CLICK to beautify your code!
+* Config atom for soft wrap and indent guide!
 
 ### By Nicholas Jensen-Hay
 
