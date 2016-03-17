@@ -8,6 +8,7 @@ It also includes a script to create the pairs file for Epicodus students, which 
 
 # MY CONDITIONS FOR USING THIS PROGRAM
 ## Fork it to your own repository
+### [Original Repository](http://github.com/hreacon/autonode)
 Change your name and initials in paircreator.sh, autonode.sh, and the readme template in cp/ - the default is my name
 Run the script by typing
     ./autonode.sh - to create a new project including
