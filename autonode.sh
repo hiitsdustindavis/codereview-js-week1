@@ -15,12 +15,13 @@ read project
 
 if [ ! -d "$project" ]; then # if the directory does not exist
   mkdir ../"$project"
-  mkdir ../"$project"/js ../"$project"/scss
+  mkdir ../"$project"/js ../"$project"/scss ../"$project"/atomconfigfile
   cp -r cp/js/. ../"$project"/js/
   touch ../"$project"/js/"$project".js
   cp -r cp/scss/. ../"$project"/scss/
   cp -r cp/. ../"$project"/
   cp -r cp/atom/config.cson ~/.atom/
+  cp -r cp/atom/config.cson ../"$project"/atomconfigfile/
   echo "Directory created and files added"
 else
   echo "Directory already exists"
@@ -41,12 +42,11 @@ echo "Setting up atom"
 apm install TODO-show
 apm install minimap minimap-highlight-selected minimap-selection
 apm install highlight-selected
-apm install autoclose-html
-apm install linter linter-coffeelint linter-csslint linter-jsonlint linter-scss-lint linter-jsxhint
+apm install linter linter-csslint linter-scss-lint linter-jshint
 apm install file-icons
 apm install atom-beautify
-apm install color-picker
-apm install merge-conflicts
+# apm install color-picker
+# apm install merge-conflicts
 
 echo "Opening directory in atom"
 atom .
