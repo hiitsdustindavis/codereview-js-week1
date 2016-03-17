@@ -31,7 +31,7 @@ gulp.task('concatInterface', function() {
   .pipe(gulp.dest('./tmp'));
 });
 
-gulp.task('jsBrowserify', ['concatInterface'], function() {
+gulp.task('jsBrowserify', ['concatInterface', 'jshint'], function() {
   return browserify({ entries: ['./tmp/allConcat.js'] })
   .bundle()
   .pipe(source('app.js'))
@@ -73,7 +73,7 @@ gulp.task("build", ['clean'], function(){
   gulp.start('cssBuild')
 });
 
-gulp.task('jsBuild', ['jsBrowserify', 'jshint'], function() {
+gulp.task('jsBuild', ['jsBrowserify'], function() {
   browserSync.reload();
   gulp.start('gitStatus');
 });
@@ -106,7 +106,8 @@ gulp.task('serve', function() {
 gulp.task('jshint', function(){
   return gulp.src(['js/*.js'])
   .pipe(jshint())
-  .pipe(jshint.reporter('default'));
+  .pipe(jshint.reporter('default'))
+  .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('cssBuild', function() {
