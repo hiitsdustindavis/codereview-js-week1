@@ -45,7 +45,7 @@ else
   if (( $? )); then
     echo "Unable to git init"
   fi
-  git pair njh "$pairinitial"
+  git pair dd "$pairinitial"
   if (( $? )); then
     echo "Unable to set authors"
   fi

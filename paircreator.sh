@@ -9,10 +9,10 @@ FILE=~/.pairs
 
 # now set to mine(Nicholas Jensen-Hay)
 echo pairs: > ""$FILE""
-echo "  njh: Nicholas Jensen-Hay" >> "$FILE"
+echo "  dd: Dustin Davis" >> "$FILE"
 echo "  $initial2: $name2" >> "$FILE"
 echo email_addresses: >> "$FILE"
-echo "  njh: nicholasjensenhay@gmail.com" >> "$FILE"
+echo "  dd: hiitsdustindavis@gmail.com" >> "$FILE"
 echo "  $initial2: $email2" >> "$FILE"
 
 echo "$FILE" file written.

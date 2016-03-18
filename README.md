@@ -1,70 +1,50 @@
-# Auto Node
-## Version 1.1.2
+# _Project Title_
 
-A bash script that creates the directory structure, and copies the required files for node, bower, and gulp for serving and building js node projects. It installs node and bower. Adds git commands to gulp, shows gulp status. Makes the gulp serve not crash on bad js loads. Configures atom and installs some cool packages. Provides a shell script with every project so when you clone it from github restarting is easy.
-It also includes a script to create the pairs file for Epicodus students, which Automatically runs at the beginning of autonode.
+#### _A simple template, 3.__.2016_
 
-### Update Log
+### By _** Nicholas Jensen-Hay and **_
 
-1.1.2 : Removed linter-scss-lint from Atom packages because it threw errors.
+## Description
 
-### How to use
+_This web app is designed to ._
 
-# MY CONDITIONS FOR USING THIS PROGRAM
-## Fork it to your own repository
-### [Original Repository](http://github.com/hreacon/autonode)
-Change your name and initials in paircreator.sh, autonode.sh, and the readme template in cp/ - the default is my name
-Run the script by typing
-    ./autonode.sh - to create a new project including
-* node
-* bower
-* gulp
-* jquery
-* scss
-* bootstrap
-* index.html, scss/styles.css, js/browser-interface.js, js/project_name.js
+_The goal of this project is to ._
 
-### Features
+_The project was put together using ._
 
-* Checks for existing .pairs file to prevent accidental overwriting
-    * offers to write a pairs file if you haven't got one.
-* Git Status in the server window
-* Gulp Git Commit
-* NON Crashing, auto refreshing, Gulp Serve
-* Automatically installes npm and bower packages.
-* Automatically opens atom for you to start writing your files while it does the above install.
-* Opens the server at the end of the install so you can see your work.
-* When pulling a project made with autonode from github just run ./serve.sh to config atom, install atom packages, node install, bower install, gulp build and gulp serve.
-* ./serve.sh doesn't node or bower if the folders already exist
+## Setup/Installation
 
-##### Easy-Commit
+#### System Requirements
 
-Just open message.txt, edit the message (the files entire contents are the commit message) and save to commit your work!
+1. [Node.js](https://nodejs.org/en/) w/ [npm](https://www.npmjs.com/)
+2. [Bower](http://bower.io/)
 
-##### Atom Packages!
-* TODO-show
-* minimap, with highlight-selected and selected
-* highlight-selected
-* linter with css, scss, and js support
-* file-icons
-* atom-beautify - RIGHT CLICK to beautify your code!
-* Config atom for soft wrap and indent guide!
+#### Installation
 
-### By Nicholas Jensen-Hay
+* After cloning the repo, simply run
 
-Pull requests accepted from:
-* Joe Karasek
-  * Fixed gulp serve crash
-  * Provided readme template
+        ./serve.sh
+
+* in bash to config atom, install node and bower dependencies and build your project
+
+* Gulp is used to handle both building the site and launching a server to host the site...
+
+## Known Bugs
+
+_This application is not fully designed and may have unknown bugs._
+
+## Support and contact details
+
+_If you have any questions, concerns, or feedback, please contact the authors through_ [gitHub](https://github.com/hreacon/).
+
+## Technologies Used
+
+* _This project was built on [Node.js](https://nodejs.org/en/)._
+* _Dependencies were handled with [npm](https://www.npmjs.com/) and [Bower](http://bower.io/)._
+* _[Gulp](http://gulpjs.com/) is an awesome asset pipeline used in this project._
 
 ### License
 
-Copyright (c) 2016 Nicholas Jensen-Hay
+MIT License.
 
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Copyright (c) 2016 **_Nicholas Jensen-Hay_**
