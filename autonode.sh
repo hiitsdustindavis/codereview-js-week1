@@ -38,24 +38,6 @@ cd ../"$project"
 echo "Enter pairs intials"
 read pairinitial
 
-echo "Setting up atom"
-apm install TODO-show
-apm install minimap minimap-highlight-selected minimap-selection
-apm install highlight-selected
-apm install linter linter-csslint linter-scss-lint linter-jshint
-apm install file-icons
-apm install atom-beautify
-# apm install color-picker
-# apm install merge-conflicts
-
-echo "Opening directory in atom"
-atom .
-
-npm install
-bower install
-
-sed -i 'bak' 's/git commit/git pair-commit/g' ./node_modules/gulp-git/lib/commit.js
-
 if [ -d ".git" ]; then
   echo "Git already init"
 else
@@ -71,12 +53,12 @@ else
   if (( $? )); then
     echo "Unable to git add"
   fi
-  git commit -m "$INITIAL_COMMIT_MESSAGE"
+  git pair-commit -m "$INITIAL_COMMIT_MESSAGE"
   if (( $? )); then
     echo "Unable to git commit"
   fi
   echo "The directory was initialized"
 fi
 
-gulp build
-gulp serve
+chmod 777 ./serve.sh
+./serve.sh

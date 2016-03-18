@@ -1,5 +1,5 @@
 
-if [ ! -d "~/.atom/packages/minimapa" ]; then
+if [ ! -d "~/.atom/packages/minimap" ]; then
   echo "Setting up atom"
   cp -r ./atomconfigfile/config.cson ~/.atom/
   apm install TODO-show
@@ -11,6 +11,9 @@ if [ ! -d "~/.atom/packages/minimapa" ]; then
   # apm install color-picker
   # apm install merge-conflicts
 fi
+
+echo "Opening directory in atom"
+atom .
 
 if [ ! -d "./node_modules" ]; then
   npm install
