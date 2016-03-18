@@ -5,7 +5,7 @@ if [ ! -d ~/.atom/packages/minimap ]; then
   apm install TODO-show
   apm install minimap minimap-highlight-selected minimap-selection
   apm install highlight-selected
-  apm install linter linter-csslint linter-scss-lint linter-jshint
+  apm install linter linter-csslint linter-jshint
   apm install file-icons
   apm install atom-beautify
   # apm install color-picker

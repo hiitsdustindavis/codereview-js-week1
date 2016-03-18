@@ -1,8 +1,12 @@
 # Auto Node
-## Version 1.1.1
+## Version 1.1.2
 
 A bash script that creates the directory structure, and copies the required files for node, bower, and gulp for serving and building js node projects. It installs node and bower. Adds git commands to gulp, shows gulp status. Makes the gulp serve not crash on bad js loads. Configures atom and installs some cool packages. Provides a shell script with every project so when you clone it from github restarting is easy.
 It also includes a script to create the pairs file for Epicodus students, which Automatically runs at the beginning of autonode.
+
+### Update Log
+
+1.1.2 : Removed linter-scss-lint from Atom packages because it threw errors.
 
 ### How to use
 
