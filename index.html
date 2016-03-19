@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic' rel='stylesheet' type='text/css'>
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Github Search</title>
@@ -11,17 +12,18 @@
   <body>
     <!-- <div class="container-fluid"> -->
       <header>
-        <h1 class="container">Github User Search</h1>
+        <img class="logo" src="img/GitHub_Logo.png" alt="git hub logo" />
         <div class="input-group container">
-          <input id="searchInput" type="text" class="form-control" placeholder="Search for...">
+          <input id="searchInput" type="text" class="form-control" placeholder="Enter a github username">
           <span class="input-group-btn">
             <button class="userSearch btn" type="button" name="button">Search</button>
+          </span>  
         </div>
       </header>
       <section class="main container">
         <div class="output container">
-          <h1 class="showUser"></h1>
-          <ul class="showRepo"></ul>
+          <h2 class="showUser"></h2>
+          <div class="showRepo"></div>
         </div>
       </section>
       <footer></footer>
