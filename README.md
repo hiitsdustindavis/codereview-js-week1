@@ -1,41 +1,32 @@
-# _Project Title_
-
-#### _A simple template, 3.__.2016_
-
-### By _** Nicholas Jensen-Hay and **_
+# _JS Code Review Week 1_
 
 ## Description
 
-_This web app is designed to ._
+Using the github api:
+For each repository belonging to the given user, we want to display its name, and its description (if it exists).
 
-_The goal of this project is to ._
+As you build your app, make sure to structure your project directory in a logical way, including 2 JavaScript files, and one of them should be a module using exports. Also include a basic SASS style sheet. Finally, make sure to include a README and a .gitignore file, and use all of the build tools that have been introduced this week:
 
-_The project was put together using ._
+Manage frontend dependencies with Bower.
+Manage all our other dependencies with npm.
+Write an asset pipeline with a live reloading development server in gulp.
+You must include gulp tasks for:
+
+Concatenation, minification, and running the browserify package on your JavaScript.
+Building and cleaning.
+Running the development server with live reloading.
+Running JSHint.
+Compiling SASS.
+Automatically including Bower dependencies as vendor.js and vendor.css.
 
 ## Setup/Installation
 
-#### System Requirements
-
-1. [Node.js](https://nodejs.org/en/) w/ [npm](https://www.npmjs.com/)
-2. [Bower](http://bower.io/)
-
-#### Installation
-
-* After cloning the repo, simply run
-
-        ./serve.sh
-
-* in bash to config atom, install node and bower dependencies and build your project
-
-* Gulp is used to handle both building the site and launching a server to host the site...
-
-## Known Bugs
-
-_This application is not fully designed and may have unknown bugs._
-
-## Support and contact details
-
-_If you have any questions, concerns, or feedback, please contact the authors through_ [gitHub](https://github.com/hreacon/).
+1. clone the repo to your machine
+2. command line: in the project top directory run:
+· npm install
+· bower install
+· gulp build
+· gulp serve
 
 ## Technologies Used
 
@@ -47,4 +38,4 @@ _If you have any questions, concerns, or feedback, please contact the authors th
 
 MIT License.
 
-Copyright (c) 2016 **_Nicholas Jensen-Hay_**
+Autonode Copyright (c) 2016 **_Nicholas Jensen-Hay_**
