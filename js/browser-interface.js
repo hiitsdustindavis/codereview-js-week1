@@ -6,6 +6,5 @@ $(document).ready(function() {
     var input = $("#searchInput").val();
     $("#searchInput").val("");
     getRepos(input);
-
   });
 });

@@ -9,21 +9,22 @@
     <title>Github Search</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <header class="jumbotron">
+    <!-- <div class="container-fluid"> -->
+      <header>
         <h1 class="container">Github User Search</h1>
+        <div class="input-group container">
+          <input id="searchInput" type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="userSearch btn" type="button" name="button">Search</button>
+        </div>
       </header>
       <section class="main container">
-          <div class="input-group">
-            <input id="searchInput" type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="userSearch btn" type="button" name="button">Search</button>
-          </div>
-        <div class="output">
+        <div class="output container">
           <h1 class="showUser"></h1>
           <ul class="showRepo"></ul>
         </div>
       </section>
-    </div>
+      <footer></footer>
+    <!-- </div> -->
   </body>
 </html>
