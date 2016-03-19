@@ -5,7 +5,7 @@ $(document).ready(function() {
     event.preventDefault();
     var input = $("#searchInput").val();
     $("#searchInput").val("");
-
+    $('.showRepo').empty();
     getRepos(input);
   });
 });
